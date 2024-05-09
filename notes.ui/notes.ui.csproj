@@ -57,13 +57,49 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="NovaPasta1\**" />
+	  <AndroidResource Remove="NovaPasta\**" />
+	  <Compile Remove="NovaPasta1\**" />
+	  <Compile Remove="NovaPasta\**" />
+	  <EmbeddedResource Remove="NovaPasta1\**" />
+	  <EmbeddedResource Remove="NovaPasta\**" />
+	  <MauiCss Remove="NovaPasta1\**" />
+	  <MauiCss Remove="NovaPasta\**" />
+	  <MauiXaml Remove="NovaPasta1\**" />
+	  <MauiXaml Remove="NovaPasta\**" />
+	  <None Remove="NovaPasta1\**" />
+	  <None Remove="NovaPasta\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Remove="MainPage.xaml.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Remove="MainPage.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\icon_about.png" />
+	  <None Remove="Resources\Images\icon_about_ios.png" />
+	  <None Remove="Resources\Images\icon_notes.png" />
+	  <None Remove="Resources\Images\icon_notes_ios.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Sobre.xaml">
+	  <MauiXaml Update="Views\AllNotes.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\NotePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Sobre.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

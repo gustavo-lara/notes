@@ -3,20 +3,19 @@
     x:Class="notes.ui.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:notes.ui"
-    Shell.FlyoutBehavior="Disabled"
-    Title="notes.ui">
+    xmlns:local="clr-namespace:notes.ui.Views"
+    Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
         <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-    
-    <ShellContent
-        Title="Sobre"
+        ContentTemplate="{DataTemplate local:NotePage}"
+        Route="NotePage"
+        Icon="{OnPlatform 'icon_notes', iOS='icon_notes_ios', MacCatalyst='icon_notes_ios'}"/>
+
+        <ShellContent
         ContentTemplate="{DataTemplate local:Sobre}"
-        Route="Sobre" />
-    </TabBar>    
+        Route="Sobre"
+        Icon="{OnPlatform 'icon_about', iOS='icon_about_ios', MacCatalyst='icon_about_ios'}"/>
+    </TabBar>
 
 </Shell>
